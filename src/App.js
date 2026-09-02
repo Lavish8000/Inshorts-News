@@ -4,7 +4,6 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import NavInshort from "./components/NavInshort";
 import NewsContent from "./components/NewsContent/NewsContent";
-import apiKey from "./data/config";
 
 function App() {
   const [newsArray, setNewsArray] = useState([]);
@@ -15,7 +14,7 @@ function App() {
   const newsApi = async () => {
     try {
       const news = await axios.get(
-        `https://newsapi.org/v2/everything?q=India%20${category}&language=en&sortBy=publishedAt&apiKey=${apiKey}&pageSize=${loadMore}`,
+        `https://newsapi.org/v2/everything?q=India%20${category}&language=en&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}`,
       );
 
       setNewsArray(news.data.articles);
