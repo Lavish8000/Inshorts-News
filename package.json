@@ -2,9 +2,6 @@
   "name": "inshorts-clone",
   "version": "0.1.0",
   "private": true,
-   "engines": {
-    "node": "16.x"
-  },
   "proxy": "http://127.0.0.1:5000",
   "dependencies": {
     "@material-ui/core": "^4.11.2",
@@ -18,7 +15,7 @@
     "inshorts-api": "^1.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
+    "react-scripts": "5.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
